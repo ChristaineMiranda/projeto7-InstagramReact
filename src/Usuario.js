@@ -1,9 +1,10 @@
 import React from "react"
-    let nomeAtual = "Catana"
-    let imagemAtual = "assets/img/catanacomics.svg"
+   
 
 
 export default function Usuario() {
+    let nomeAtual = "Catana"
+    let imagemAtual = "assets/img/catanacomics.svg"
 
     return (
         <User nome={nomeAtual} foto={imagemAtual} />
