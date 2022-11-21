@@ -16,10 +16,10 @@ export default function Posts() {
 
 function Post(props) {
     function salvaPost(){
-        troca icone de salvar para preenchido, usar uma variavel guardando o icone só contornado antes do onclick e dentor dessa função aqui trocar para preenchido
+        //troca icone de salvar para preenchido, usar uma variavel guardando o icone só contornado antes do onclick e dentor dessa função aqui trocar para preenchido
     }
     return (
-        <div class="post">
+        <div class="post" data-test="post">
             <div class="topo">
                 <div class="usuario">
                     <img src={props.imgUser} />
@@ -31,24 +31,24 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src={props.imgContent} />
+                <img src={props.imgContent} data-test="post-image"/>
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="heart-outline" data-test="like-post"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name="bookmark-outline" onClick ={salvaPost}></ion-icon>
+                        <ion-icon name="bookmark-outline" onClick ={salvaPost} data-test="save-post"></ion-icon>
                     </div>
                 </div>
 
                 <div class="curtidas">
                     <img src={props.ftCurtidor} />
-                    <div class="texto">
+                    <div class="texto" data-test="likes-number">
                     Curtido por <strong>{props.curtidor}</strong> e <strong>outras {props.numero} pessoas</strong>
                     </div>
                 </div>
